@@ -32,10 +32,7 @@ class _ResultScreenState extends State<ResultScreen> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Container(
-                    width: 200, height: 200, child: Image.asset("assets/")),
-
-                // Image.asset("assets/images/clear.png"),
+                Image.asset("assets/images/clear.png"),
                 Padding(
                   padding: const EdgeInsets.only(left: 20),
                   child: text(txt: " ${weather!.temp}", font: 35),
