@@ -12,30 +12,41 @@ class LogoScreen extends StatelessWidget {
           context, MaterialPageRoute(builder: (context) => SearchScreen()));
     });
     return Scaffold(
-      backgroundColor: MyTheme.defaultBackground,
-      body: Stack(
-        children: [
-          Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(
-                  width: 200,
-                  height: 200,
-                  child: Image.asset(
-                    "assets/images/cloudy.png",
-                    fit: BoxFit.cover,
-                    colorBlendMode: BlendMode.color,
+      body: Container(
+        decoration: BoxDecoration(
+            gradient: LinearGradient(
+          colors: [
+            Colors.blue,
+            Colors.blue[300]!,
+            Colors.orange[300]!,
+          ],
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+        )),
+        child: Stack(
+          children: [
+            Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    width: 200,
+                    height: 200,
+                    child: Image.asset(
+                      "assets/images/day/cloudy.png",
+                      fit: BoxFit.cover,
+                      colorBlendMode: BlendMode.color,
+                    ),
                   ),
-                ),
-                Text(
-                  "Weather App",
-                  style: TextStyle(fontSize: 30),
-                ),
-              ],
+                  Text(
+                    "Weather App",
+                    style: TextStyle(fontSize: 30),
+                  ),
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

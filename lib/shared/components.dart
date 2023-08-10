@@ -7,7 +7,7 @@ Widget text({required String txt, double font = 22}) {
     child: Text(
       txt,
       style: TextStyle(
-          fontSize: font, color: Colors.black, fontWeight: FontWeight.bold),
+          fontSize: font, color: Colors.white, fontWeight: FontWeight.bold),
     ),
   );
 }

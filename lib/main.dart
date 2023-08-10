@@ -6,7 +6,8 @@ import 'package:weather_app/providers/weather_provider.dart';
 import 'package:weather_app/shared/my_theme.dart';
 
 void main() {
-  runApp(Weather());
+  runApp(ChangeNotifierProvider(
+      create: (context) => WeatherProvider(), child: Weather()));
 }
 
 class Weather extends StatelessWidget {
@@ -15,13 +16,10 @@ class Weather extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (context) => WeatherProvider(),
-      child: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        home: LogoScreen(),
-        theme: MyTheme.LightTheme,
-      ),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: LogoScreen(),
+      theme: MyTheme.LightTheme,
     );
   }
 }
